@@ -1,17 +1,17 @@
-County/City,Station Name,Charger Type,Connector Types,Latitude,Longitude
-Nairobi,Sarit Centre,AC + DC,"Type2, CHAdeMO",-1.261245,36.802243
-Nairobi,Two Rivers Mall,AC,Type2,-1.210229,36.795216
-Nairobi,Village Market Gigiri,AC,Type2,-1.227277,36.805228
-Nairobi,UNGA House Westlands,AC,Type2,-1.26289,36.80467
-Nairobi,KCB Towers Upper Hill,AC,Type2,-1.30132,36.81279
-Nairobi,Britam Towers Upper Hill,AC,Type2,-1.29976,36.81314
-Nairobi,Movenpick Westlands,AC,Type2,-1.26107,36.80499
-Nairobi,Stima Plaza,AC/DC,Mixed,-1.27141,36.82053
-Nairobi,Ruaraka KPLC,AC/DC,Mixed,-1.25928,36.85954
-Nakuru,Westside Mall,AC,Type2,-0.28709,36.06393
-Naivasha,Buffalo Mall,AC,Type2,3.29272,37.20402
-Kiambu,Trinity Energy,AC,Type2,-1.11134,36.7843
-Kisumu,Mega City Mall,AC,Type2,-0.10723,34.77051
-Mombasa,City Mall Nyali,AC,Type2,-4.020064,39.720491
-Narok,Dallas Lounge,AC,"Type2, GBT",-1.0875,35.8771
-Mavoko,Petrocity,AC + DC,"Type2, CCS2",-1.42877,36.96085
+county,station_name,charger_type,connector_types
+Nairobi,Sarit Centre,AC + DC,"Type2, CHAdeMO"
+Nairobi,Two Rivers Mall,AC,Type2
+Nairobi,Village Market Gigiri,AC,Type2
+Nairobi,Unga House Westlands,AC,Type2
+Nairobi,Kcb Towers Upper Hill,AC,Type2
+Nairobi,Britam Towers Upper Hill,AC,Type2
+Nairobi,Movenpick Westlands,AC,Type2
+Nairobi,Stima Plaza,AC/DC,Mixed
+Nairobi,Ruaraka Kplc,AC/DC,Mixed
+Nakuru,Westside Mall,AC,Type2
+Naivasha,Buffalo Mall,AC,Type2
+Kiambu,Trinity Energy,AC,Type2
+Kisumu,Mega City Mall,AC,Type2
+Mombasa,City Mall Nyali,AC,Type2
+Narok,Dallas Lounge,AC,"Type2, GBT"
+Mavoko,Petrocity,AC + DC,"Type2, CCS2"
