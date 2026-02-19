@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c2e01b3d52ef79fd876159109962a0e5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 10px; left: 50px; width: 300px; height: 30px; 
+            z-index:9999; font-size:16px; font-weight:bold; background-color:white;
+            padding: 10px; border-radius: 5px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+    Kenya EV Charging Stations - Current Infrastructure
+</div>
+    
+            <div class="folium-map" id="map_c2e01b3d52ef79fd876159109962a0e5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c2e01b3d52ef79fd876159109962a0e5 = L.map(
+                "map_c2e01b3d52ef79fd876159109962a0e5",
+                {
+                    center: [-1.286389, 36.817223],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9a158394b75bba1c4c314d4d3dcd26e3 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_9a158394b75bba1c4c314d4d3dcd26e3.addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var marker_f2c9a8d38dbeacd49cafdd386120b4ee = L.marker(
+                [-4.020064, 39.720491],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_b3457ac49ab6716b6541bad2abbec11c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f2c9a8d38dbeacd49cafdd386120b4ee.setIcon(icon_b3457ac49ab6716b6541bad2abbec11c);
+        
+    
+        var popup_a2402fc40501ab54c6efe1e6aa426757 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f80f3a8b8c894c44a78af4f4399f0fd = $(`<div id="html_6f80f3a8b8c894c44a78af4f4399f0fd" style="width: 100.0%; height: 100.0%;">     <b>City Mall EvChaja</b><br>     County: Mombasa<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -4.0201, 39.7205     </div>`)[0];
+                popup_a2402fc40501ab54c6efe1e6aa426757.setContent(html_6f80f3a8b8c894c44a78af4f4399f0fd);
+            
+        
+
+        marker_f2c9a8d38dbeacd49cafdd386120b4ee.bindPopup(popup_a2402fc40501ab54c6efe1e6aa426757)
+        ;
+
+        
+    
+    
+            var marker_b05a53e7c0062354b69f4788f35368e4 = L.marker(
+                [-1.259614, 36.776883],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_7bf34ea825d98b755f0b256b569ca016 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b05a53e7c0062354b69f4788f35368e4.setIcon(icon_7bf34ea825d98b755f0b256b569ca016);
+        
+    
+        var popup_562e9cbbc1976f64c9b1f7960a4626c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71e9ba9ee183656cb0c3f89d1aa8b434 = $(`<div id="html_71e9ba9ee183656cb0c3f89d1aa8b434" style="width: 100.0%; height: 100.0%;">     <b>Waiyaki Way</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2596, 36.7769     </div>`)[0];
+                popup_562e9cbbc1976f64c9b1f7960a4626c0.setContent(html_71e9ba9ee183656cb0c3f89d1aa8b434);
+            
+        
+
+        marker_b05a53e7c0062354b69f4788f35368e4.bindPopup(popup_562e9cbbc1976f64c9b1f7960a4626c0)
+        ;
+
+        
+    
+    
+            var marker_c75d28be119eec8a326f297f0e9383f0 = L.marker(
+                [-1.329425, 36.71582],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_0932ed1cf041efce35ce51667d51a36f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c75d28be119eec8a326f297f0e9383f0.setIcon(icon_0932ed1cf041efce35ce51667d51a36f);
+        
+    
+        var popup_d256d67679786a09cfcc7c3a2c3c3a1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_731cb20d4001ffe79ccc5845c0c9134f = $(`<div id="html_731cb20d4001ffe79ccc5845c0c9134f" style="width: 100.0%; height: 100.0%;">     <b>Waterfront Mall EvChaja</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.3294, 36.7158     </div>`)[0];
+                popup_d256d67679786a09cfcc7c3a2c3c3a1d.setContent(html_731cb20d4001ffe79ccc5845c0c9134f);
+            
+        
+
+        marker_c75d28be119eec8a326f297f0e9383f0.bindPopup(popup_d256d67679786a09cfcc7c3a2c3c3a1d)
+        ;
+
+        
+    
+    
+            var marker_44c35581934f02c989e4c7e78482b5ec = L.marker(
+                [-1.210229, 36.795216],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_d84057c42fd00bd6e5cf81923b076bfb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_44c35581934f02c989e4c7e78482b5ec.setIcon(icon_d84057c42fd00bd6e5cf81923b076bfb);
+        
+    
+        var popup_9f617ddc66664d6f19ad1d727e841a93 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37d7bb9d8ade46bd95fd0542787727f4 = $(`<div id="html_37d7bb9d8ade46bd95fd0542787727f4" style="width: 100.0%; height: 100.0%;">     <b>Two Rivers Mall EvChaja</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2102, 36.7952     </div>`)[0];
+                popup_9f617ddc66664d6f19ad1d727e841a93.setContent(html_37d7bb9d8ade46bd95fd0542787727f4);
+            
+        
+
+        marker_44c35581934f02c989e4c7e78482b5ec.bindPopup(popup_9f617ddc66664d6f19ad1d727e841a93)
+        ;
+
+        
+    
+    
+            var marker_cf5e9a4232a6e2863b2894222693ce99 = L.marker(
+                [-1.227277, 36.805228],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_66680646966d7483288ba0acac5833cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_cf5e9a4232a6e2863b2894222693ce99.setIcon(icon_66680646966d7483288ba0acac5833cb);
+        
+    
+        var popup_f8a22bdac258e5c92de4fcd45362a3fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5674609b7ed74fce10b8bc88c17ff655 = $(`<div id="html_5674609b7ed74fce10b8bc88c17ff655" style="width: 100.0%; height: 100.0%;">     <b>Nopea Ride Village Market</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2273, 36.8052     </div>`)[0];
+                popup_f8a22bdac258e5c92de4fcd45362a3fe.setContent(html_5674609b7ed74fce10b8bc88c17ff655);
+            
+        
+
+        marker_cf5e9a4232a6e2863b2894222693ce99.bindPopup(popup_f8a22bdac258e5c92de4fcd45362a3fe)
+        ;
+
+        
+    
+    
+            var marker_9c96f3af37de476de4c32728fee5440b = L.marker(
+                [-1.333731, 36.928334],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_56a1cd78b84250e8628860bcf4732d4a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_9c96f3af37de476de4c32728fee5440b.setIcon(icon_56a1cd78b84250e8628860bcf4732d4a);
+        
+    
+        var popup_8ce463ffcd7bc1940e6e72410a928730 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b4ee020e4936f330b8e78405d5f6712 = $(`<div id="html_5b4ee020e4936f330b8e78405d5f6712" style="width: 100.0%; height: 100.0%;">     <b>Nopea JKIA Airport</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.3337, 36.9283     </div>`)[0];
+                popup_8ce463ffcd7bc1940e6e72410a928730.setContent(html_5b4ee020e4936f330b8e78405d5f6712);
+            
+        
+
+        marker_9c96f3af37de476de4c32728fee5440b.bindPopup(popup_8ce463ffcd7bc1940e6e72410a928730)
+        ;
+
+        
+    
+    
+            var marker_954d70389e5afa4b1031aae9ec739840 = L.marker(
+                [-1.211449, 36.795808],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_58fe1f6a0679aa781bc70172563ee98b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_954d70389e5afa4b1031aae9ec739840.setIcon(icon_58fe1f6a0679aa781bc70172563ee98b);
+        
+    
+        var popup_1b874a8382bb66197c520e978cb6f3c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa6877d0f54f0cc0f2d5b89181a4edc1 = $(`<div id="html_aa6877d0f54f0cc0f2d5b89181a4edc1" style="width: 100.0%; height: 100.0%;">     <b>Two Rivers Mall Nairobi (Nopea)</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2114, 36.7958     </div>`)[0];
+                popup_1b874a8382bb66197c520e978cb6f3c1.setContent(html_aa6877d0f54f0cc0f2d5b89181a4edc1);
+            
+        
+
+        marker_954d70389e5afa4b1031aae9ec739840.bindPopup(popup_1b874a8382bb66197c520e978cb6f3c1)
+        ;
+
+        
+    
+    
+            var marker_59a10155892df86bfbd87d076a30bb46 = L.marker(
+                [-1.219824, 36.889224],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_3e46505df7e42fb2cb98125d1b785193 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_59a10155892df86bfbd87d076a30bb46.setIcon(icon_3e46505df7e42fb2cb98125d1b785193);
+        
+    
+        var popup_6ed95827cd45b83efd75d73529ab7191 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9dfa4e38e224a49f24e8a5bb6f7fe6f5 = $(`<div id="html_9dfa4e38e224a49f24e8a5bb6f7fe6f5" style="width: 100.0%; height: 100.0%;">     <b>TRM Mall</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 2<br>     Coordinates: -1.2198, 36.8892     </div>`)[0];
+                popup_6ed95827cd45b83efd75d73529ab7191.setContent(html_9dfa4e38e224a49f24e8a5bb6f7fe6f5);
+            
+        
+
+        marker_59a10155892df86bfbd87d076a30bb46.bindPopup(popup_6ed95827cd45b83efd75d73529ab7191)
+        ;
+
+        
+    
+    
+            var marker_ad7d5b9cfd15379f5030abb104536602 = L.marker(
+                [-1.287358, 36.820061],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_37491f3c4ebe46c165f4b1e73fa3ca05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ad7d5b9cfd15379f5030abb104536602.setIcon(icon_37491f3c4ebe46c165f4b1e73fa3ca05);
+        
+    
+        var popup_728acab2d3c63f0a1e12cb7287e47d09 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e74b79b155d41ef86313fee85994b49 = $(`<div id="html_6e74b79b155d41ef86313fee85994b49" style="width: 100.0%; height: 100.0%;">     <b>Holy Family Basilica Parking Silo</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2874, 36.8201     </div>`)[0];
+                popup_728acab2d3c63f0a1e12cb7287e47d09.setContent(html_6e74b79b155d41ef86313fee85994b49);
+            
+        
+
+        marker_ad7d5b9cfd15379f5030abb104536602.bindPopup(popup_728acab2d3c63f0a1e12cb7287e47d09)
+        ;
+
+        
+    
+    
+            var marker_106a6517b796c8a03d3a44966110eeaf = L.marker(
+                [-1.319503, 36.703528],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_df996cdd3f0b21d9b502691aee29a7a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_106a6517b796c8a03d3a44966110eeaf.setIcon(icon_df996cdd3f0b21d9b502691aee29a7a8);
+        
+    
+        var popup_25db6e3ef0c5a6c57a39a65983d5fceb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_382e2f40d0e75d5f6d2c15e205a0dc3e = $(`<div id="html_382e2f40d0e75d5f6d2c15e205a0dc3e" style="width: 100.0%; height: 100.0%;">     <b>The Hub Mall Karen</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.3195, 36.7035     </div>`)[0];
+                popup_25db6e3ef0c5a6c57a39a65983d5fceb.setContent(html_382e2f40d0e75d5f6d2c15e205a0dc3e);
+            
+        
+
+        marker_106a6517b796c8a03d3a44966110eeaf.bindPopup(popup_25db6e3ef0c5a6c57a39a65983d5fceb)
+        ;
+
+        
+    
+    
+            var marker_2be88c45025ae1e767c2a3c9e9452644 = L.marker(
+                [-1.340858, 36.757547],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_5f8cac2cdda74c9dca15860200ddd551 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2be88c45025ae1e767c2a3c9e9452644.setIcon(icon_5f8cac2cdda74c9dca15860200ddd551);
+        
+    
+        var popup_73dba672016d19d62fcb080e1060b7ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a26730e5cad716c81aa32e2bdbfc269 = $(`<div id="html_7a26730e5cad716c81aa32e2bdbfc269" style="width: 100.0%; height: 100.0%;">     <b>Knights Energy</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 3<br>     Coordinates: -1.3409, 36.7575     </div>`)[0];
+                popup_73dba672016d19d62fcb080e1060b7ab.setContent(html_7a26730e5cad716c81aa32e2bdbfc269);
+            
+        
+
+        marker_2be88c45025ae1e767c2a3c9e9452644.bindPopup(popup_73dba672016d19d62fcb080e1060b7ab)
+        ;
+
+        
+    
+    
+            var marker_041778b866ac746ce6293885f5cb58f4 = L.marker(
+                [-1.261245, 36.802243],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_15030ded9fffd80c85b3bd1c8534cc36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_041778b866ac746ce6293885f5cb58f4.setIcon(icon_15030ded9fffd80c85b3bd1c8534cc36);
+        
+    
+        var popup_9b4df17f434db2ddcb8648d802232094 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0a3d1528608028306ff3bc075839e6d = $(`<div id="html_d0a3d1528608028306ff3bc075839e6d" style="width: 100.0%; height: 100.0%;">     <b>Sarit Centre</b><br>     County: Nairobi<br>     Charger Type: AC + DC<br>     Ports: 1<br>     Coordinates: -1.2612, 36.8022     </div>`)[0];
+                popup_9b4df17f434db2ddcb8648d802232094.setContent(html_d0a3d1528608028306ff3bc075839e6d);
+            
+        
+
+        marker_041778b866ac746ce6293885f5cb58f4.bindPopup(popup_9b4df17f434db2ddcb8648d802232094)
+        ;
+
+        
+    
+    
+            var marker_41918f939c0e21fb75fd128db47eed56 = L.marker(
+                [-1.210229, 36.795216],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_ac02fbbce94976f0be0d0b44fabdaee9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_41918f939c0e21fb75fd128db47eed56.setIcon(icon_ac02fbbce94976f0be0d0b44fabdaee9);
+        
+    
+        var popup_c2391ab3b688fe704dfe7a1c8d82c2bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44020b7268e65b443f8acecc757acdf7 = $(`<div id="html_44020b7268e65b443f8acecc757acdf7" style="width: 100.0%; height: 100.0%;">     <b>Two Rivers Mall</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2102, 36.7952     </div>`)[0];
+                popup_c2391ab3b688fe704dfe7a1c8d82c2bc.setContent(html_44020b7268e65b443f8acecc757acdf7);
+            
+        
+
+        marker_41918f939c0e21fb75fd128db47eed56.bindPopup(popup_c2391ab3b688fe704dfe7a1c8d82c2bc)
+        ;
+
+        
+    
+    
+            var marker_0b439bec25c3d073160a00d77bfed675 = L.marker(
+                [-1.227277, 36.805228],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_c1b3ae0567d37f59b49f363417339017 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0b439bec25c3d073160a00d77bfed675.setIcon(icon_c1b3ae0567d37f59b49f363417339017);
+        
+    
+        var popup_bfeb2763582b7cd9372f8e09aa761514 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94c0daf73b6c2ecbd18a7411769dce52 = $(`<div id="html_94c0daf73b6c2ecbd18a7411769dce52" style="width: 100.0%; height: 100.0%;">     <b>Village Market Gigiri</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2273, 36.8052     </div>`)[0];
+                popup_bfeb2763582b7cd9372f8e09aa761514.setContent(html_94c0daf73b6c2ecbd18a7411769dce52);
+            
+        
+
+        marker_0b439bec25c3d073160a00d77bfed675.bindPopup(popup_bfeb2763582b7cd9372f8e09aa761514)
+        ;
+
+        
+    
+    
+            var marker_d9f8f62d2a2ac72dbc987f39dafafe26 = L.marker(
+                [-1.26289, 36.80467],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_99474f09aaf1313e966a2c29260db8ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d9f8f62d2a2ac72dbc987f39dafafe26.setIcon(icon_99474f09aaf1313e966a2c29260db8ee);
+        
+    
+        var popup_b5eb31da2cd7185070d110155ddded13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94be4a967c28aae80efcbaa74709834c = $(`<div id="html_94be4a967c28aae80efcbaa74709834c" style="width: 100.0%; height: 100.0%;">     <b>UNGA House Westlands</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2629, 36.8047     </div>`)[0];
+                popup_b5eb31da2cd7185070d110155ddded13.setContent(html_94be4a967c28aae80efcbaa74709834c);
+            
+        
+
+        marker_d9f8f62d2a2ac72dbc987f39dafafe26.bindPopup(popup_b5eb31da2cd7185070d110155ddded13)
+        ;
+
+        
+    
+    
+            var marker_bf29e65db6b976a88fb08bb2db220526 = L.marker(
+                [-1.30132, 36.81279],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_b43caebf8fd07d38a0305f131d4b36ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_bf29e65db6b976a88fb08bb2db220526.setIcon(icon_b43caebf8fd07d38a0305f131d4b36ea);
+        
+    
+        var popup_ae3f30eab5e4a93eb1a7f93a220f8971 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bbddaba532375f334ca46474d93de9e2 = $(`<div id="html_bbddaba532375f334ca46474d93de9e2" style="width: 100.0%; height: 100.0%;">     <b>KCB Towers Upper Hill</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.3013, 36.8128     </div>`)[0];
+                popup_ae3f30eab5e4a93eb1a7f93a220f8971.setContent(html_bbddaba532375f334ca46474d93de9e2);
+            
+        
+
+        marker_bf29e65db6b976a88fb08bb2db220526.bindPopup(popup_ae3f30eab5e4a93eb1a7f93a220f8971)
+        ;
+
+        
+    
+    
+            var marker_428cb2cedc1d44efe25949b030d00a33 = L.marker(
+                [-1.29976, 36.81314],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_c92e8e19512f5f828d8707c618913742 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_428cb2cedc1d44efe25949b030d00a33.setIcon(icon_c92e8e19512f5f828d8707c618913742);
+        
+    
+        var popup_320719d282b31584920ac2893dc4b01d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_70a4f6cc0c4153a7f9eeb98fe70ba9e5 = $(`<div id="html_70a4f6cc0c4153a7f9eeb98fe70ba9e5" style="width: 100.0%; height: 100.0%;">     <b>Britam Towers Upper Hill</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2998, 36.8131     </div>`)[0];
+                popup_320719d282b31584920ac2893dc4b01d.setContent(html_70a4f6cc0c4153a7f9eeb98fe70ba9e5);
+            
+        
+
+        marker_428cb2cedc1d44efe25949b030d00a33.bindPopup(popup_320719d282b31584920ac2893dc4b01d)
+        ;
+
+        
+    
+    
+            var marker_7e1d52cf739005f4ea92df6f0c6b522f = L.marker(
+                [-1.26107, 36.80499],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_cfe6b684517a7f71179a0468aadf76c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_7e1d52cf739005f4ea92df6f0c6b522f.setIcon(icon_cfe6b684517a7f71179a0468aadf76c5);
+        
+    
+        var popup_51cae5b5d788b437289e4d3b8e8dccb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9ed4a188c55a5b6c8f4d464d78bab3b = $(`<div id="html_c9ed4a188c55a5b6c8f4d464d78bab3b" style="width: 100.0%; height: 100.0%;">     <b>Movenpick Westlands</b><br>     County: Nairobi<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.2611, 36.8050     </div>`)[0];
+                popup_51cae5b5d788b437289e4d3b8e8dccb6.setContent(html_c9ed4a188c55a5b6c8f4d464d78bab3b);
+            
+        
+
+        marker_7e1d52cf739005f4ea92df6f0c6b522f.bindPopup(popup_51cae5b5d788b437289e4d3b8e8dccb6)
+        ;
+
+        
+    
+    
+            var marker_8db81648a4c7a902b0ff911f153a6a68 = L.marker(
+                [-1.27141, 36.82053],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_ea1fe2906eb77f974475a4e26c36355d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8db81648a4c7a902b0ff911f153a6a68.setIcon(icon_ea1fe2906eb77f974475a4e26c36355d);
+        
+    
+        var popup_c4ff892f7eaa168b8b49fa1826c6a8c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_925c1a596bdcc006fbcf6bb4300d4360 = $(`<div id="html_925c1a596bdcc006fbcf6bb4300d4360" style="width: 100.0%; height: 100.0%;">     <b>Stima Plaza</b><br>     County: Nairobi<br>     Charger Type: AC/DC<br>     Ports: 1<br>     Coordinates: -1.2714, 36.8205     </div>`)[0];
+                popup_c4ff892f7eaa168b8b49fa1826c6a8c4.setContent(html_925c1a596bdcc006fbcf6bb4300d4360);
+            
+        
+
+        marker_8db81648a4c7a902b0ff911f153a6a68.bindPopup(popup_c4ff892f7eaa168b8b49fa1826c6a8c4)
+        ;
+
+        
+    
+    
+            var marker_a3f76aaa1bea3af782e4621607cd3978 = L.marker(
+                [-1.25928, 36.85954],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_8bb4a0ea3d46ba2abe541eb6dd5e119f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a3f76aaa1bea3af782e4621607cd3978.setIcon(icon_8bb4a0ea3d46ba2abe541eb6dd5e119f);
+        
+    
+        var popup_bb340a55528f1196bc2794899fb3fa02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9032a5b8c613cdc41e75ad85bad2e5a4 = $(`<div id="html_9032a5b8c613cdc41e75ad85bad2e5a4" style="width: 100.0%; height: 100.0%;">     <b>Ruaraka KPLC</b><br>     County: Nairobi<br>     Charger Type: AC/DC<br>     Ports: 1<br>     Coordinates: -1.2593, 36.8595     </div>`)[0];
+                popup_bb340a55528f1196bc2794899fb3fa02.setContent(html_9032a5b8c613cdc41e75ad85bad2e5a4);
+            
+        
+
+        marker_a3f76aaa1bea3af782e4621607cd3978.bindPopup(popup_bb340a55528f1196bc2794899fb3fa02)
+        ;
+
+        
+    
+    
+            var marker_ff68a7f5e619b8b9ccdefec52738304e = L.marker(
+                [-0.28709, 36.06393],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_110fc2842aba3817f1b734ce7b6236bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ff68a7f5e619b8b9ccdefec52738304e.setIcon(icon_110fc2842aba3817f1b734ce7b6236bb);
+        
+    
+        var popup_5d53bdf4ea049b60aa1a7ca88e8bc61a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b69b492534f6ebeb2ed1fe78339c795b = $(`<div id="html_b69b492534f6ebeb2ed1fe78339c795b" style="width: 100.0%; height: 100.0%;">     <b>Westside Mall</b><br>     County: Nakuru<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -0.2871, 36.0639     </div>`)[0];
+                popup_5d53bdf4ea049b60aa1a7ca88e8bc61a.setContent(html_b69b492534f6ebeb2ed1fe78339c795b);
+            
+        
+
+        marker_ff68a7f5e619b8b9ccdefec52738304e.bindPopup(popup_5d53bdf4ea049b60aa1a7ca88e8bc61a)
+        ;
+
+        
+    
+    
+            var marker_acb4e5eecde60cac4aaee07b931a9e02 = L.marker(
+                [3.29272, 37.20402],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_d99d83c25a511ded79d4ac7ff0029011 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_acb4e5eecde60cac4aaee07b931a9e02.setIcon(icon_d99d83c25a511ded79d4ac7ff0029011);
+        
+    
+        var popup_8bff540cd00e970508363cb9f6a59647 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa59a8574cf36e8588b281d5643cb73c = $(`<div id="html_aa59a8574cf36e8588b281d5643cb73c" style="width: 100.0%; height: 100.0%;">     <b>Buffalo Mall</b><br>     County: Nakuru<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: 3.2927, 37.2040     </div>`)[0];
+                popup_8bff540cd00e970508363cb9f6a59647.setContent(html_aa59a8574cf36e8588b281d5643cb73c);
+            
+        
+
+        marker_acb4e5eecde60cac4aaee07b931a9e02.bindPopup(popup_8bff540cd00e970508363cb9f6a59647)
+        ;
+
+        
+    
+    
+            var marker_d157b9aad6a41823406485d11fffdc49 = L.marker(
+                [-1.11134, 36.7843],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_f4b9c04c6d52e36968d1bc34e1b48987 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d157b9aad6a41823406485d11fffdc49.setIcon(icon_f4b9c04c6d52e36968d1bc34e1b48987);
+        
+    
+        var popup_ded21f50a9502784008f4b37d0fa47de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13ab80ff3c97decedc07c567b7ef3a7b = $(`<div id="html_13ab80ff3c97decedc07c567b7ef3a7b" style="width: 100.0%; height: 100.0%;">     <b>Trinity Energy</b><br>     County: Kiambu<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.1113, 36.7843     </div>`)[0];
+                popup_ded21f50a9502784008f4b37d0fa47de.setContent(html_13ab80ff3c97decedc07c567b7ef3a7b);
+            
+        
+
+        marker_d157b9aad6a41823406485d11fffdc49.bindPopup(popup_ded21f50a9502784008f4b37d0fa47de)
+        ;
+
+        
+    
+    
+            var marker_537388499eb0bdf96db3ddcece2d2f09 = L.marker(
+                [-0.10723, 34.77051],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_568b764b1c550c49a4acbfd5a3071410 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_537388499eb0bdf96db3ddcece2d2f09.setIcon(icon_568b764b1c550c49a4acbfd5a3071410);
+        
+    
+        var popup_2485ce19633a1376ad62dc6c2a8739ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d436a99812d4b0c11f1c33803540010 = $(`<div id="html_5d436a99812d4b0c11f1c33803540010" style="width: 100.0%; height: 100.0%;">     <b>Mega City Mall</b><br>     County: Kisumu<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -0.1072, 34.7705     </div>`)[0];
+                popup_2485ce19633a1376ad62dc6c2a8739ee.setContent(html_5d436a99812d4b0c11f1c33803540010);
+            
+        
+
+        marker_537388499eb0bdf96db3ddcece2d2f09.bindPopup(popup_2485ce19633a1376ad62dc6c2a8739ee)
+        ;
+
+        
+    
+    
+            var marker_37a44adab18cca761b080c3ff0e59c39 = L.marker(
+                [-4.020064, 39.720491],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_438e4f2fff9e032343cfc6b549220aca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_37a44adab18cca761b080c3ff0e59c39.setIcon(icon_438e4f2fff9e032343cfc6b549220aca);
+        
+    
+        var popup_aed73d524e01948955265961b1481837 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c3f3757a66e14c917db659310b3d9df9 = $(`<div id="html_c3f3757a66e14c917db659310b3d9df9" style="width: 100.0%; height: 100.0%;">     <b>City Mall Nyali</b><br>     County: Mombasa<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -4.0201, 39.7205     </div>`)[0];
+                popup_aed73d524e01948955265961b1481837.setContent(html_c3f3757a66e14c917db659310b3d9df9);
+            
+        
+
+        marker_37a44adab18cca761b080c3ff0e59c39.bindPopup(popup_aed73d524e01948955265961b1481837)
+        ;
+
+        
+    
+    
+            var marker_fd7c941c13c3e5aec334acfff2f50dd3 = L.marker(
+                [-1.0875, 35.8771],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_7175b217b2d5b825965c4f659137da5d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plug", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_fd7c941c13c3e5aec334acfff2f50dd3.setIcon(icon_7175b217b2d5b825965c4f659137da5d);
+        
+    
+        var popup_7127e75a8bd3f3bf020f73a11a81ec73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_efbebad1f5ceefd2b79d0465830418c0 = $(`<div id="html_efbebad1f5ceefd2b79d0465830418c0" style="width: 100.0%; height: 100.0%;">     <b>Dallas Lounge</b><br>     County: Narok<br>     Charger Type: AC<br>     Ports: 1<br>     Coordinates: -1.0875, 35.8771     </div>`)[0];
+                popup_7127e75a8bd3f3bf020f73a11a81ec73.setContent(html_efbebad1f5ceefd2b79d0465830418c0);
+            
+        
+
+        marker_fd7c941c13c3e5aec334acfff2f50dd3.bindPopup(popup_7127e75a8bd3f3bf020f73a11a81ec73)
+        ;
+
+        
+    
+    
+            var marker_4142f36d79aa21b5c5a32de6812c7a7c = L.marker(
+                [-1.42877, 36.96085],
+                {}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+            var icon_b9ac1cab1e107328932a10f229e6c228 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4142f36d79aa21b5c5a32de6812c7a7c.setIcon(icon_b9ac1cab1e107328932a10f229e6c228);
+        
+    
+        var popup_8e229dda79113d44123fd4433429c908 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be889a5b3b2da9ffa436193f3304dfda = $(`<div id="html_be889a5b3b2da9ffa436193f3304dfda" style="width: 100.0%; height: 100.0%;">     <b>Petrocity</b><br>     County: Machakos<br>     Charger Type: AC + DC<br>     Ports: 1<br>     Coordinates: -1.4288, 36.9609     </div>`)[0];
+                popup_8e229dda79113d44123fd4433429c908.setContent(html_be889a5b3b2da9ffa436193f3304dfda);
+            
+        
+
+        marker_4142f36d79aa21b5c5a32de6812c7a7c.bindPopup(popup_8e229dda79113d44123fd4433429c908)
+        ;
+
+        
+    
+    
+            var circle_marker_ce312124e531520e1164699a6b53760d = L.circleMarker(
+                [-0.091702, 34.767956],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+        var popup_bfaa5d48f4e9e9e9d464065106f2662d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7bda36a3e839e902b843dddf33cd8eb9 = $(`<div id="html_7bda36a3e839e902b843dddf33cd8eb9" style="width: 100.0%; height: 100.0%;">Kisumu - Major city</div>`)[0];
+                popup_bfaa5d48f4e9e9e9d464065106f2662d.setContent(html_7bda36a3e839e902b843dddf33cd8eb9);
+            
+        
+
+        circle_marker_ce312124e531520e1164699a6b53760d.bindPopup(popup_bfaa5d48f4e9e9e9d464065106f2662d)
+        ;
+
+        
+    
+    
+            var circle_marker_6376c082b00f1b4fd6836889635519f4 = L.circleMarker(
+                [-0.303099, 36.080026],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+        var popup_64e316c68885dc4d724c6fab64ff6e30 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee16631e9df17f3016937dc3bbf62ea9 = $(`<div id="html_ee16631e9df17f3016937dc3bbf62ea9" style="width: 100.0%; height: 100.0%;">Nakuru - Major city</div>`)[0];
+                popup_64e316c68885dc4d724c6fab64ff6e30.setContent(html_ee16631e9df17f3016937dc3bbf62ea9);
+            
+        
+
+        circle_marker_6376c082b00f1b4fd6836889635519f4.bindPopup(popup_64e316c68885dc4d724c6fab64ff6e30)
+        ;
+
+        
+    
+    
+            var circle_marker_bf19f519efbb6e466b55482574ca6511 = L.circleMarker(
+                [-4.043477, 39.668206],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+        var popup_2199cec23f37651a7d4eef243ed20bd7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f254702f0f7abe458af2bf40df4b8264 = $(`<div id="html_f254702f0f7abe458af2bf40df4b8264" style="width: 100.0%; height: 100.0%;">Mombasa - Major city</div>`)[0];
+                popup_2199cec23f37651a7d4eef243ed20bd7.setContent(html_f254702f0f7abe458af2bf40df4b8264);
+            
+        
+
+        circle_marker_bf19f519efbb6e466b55482574ca6511.bindPopup(popup_2199cec23f37651a7d4eef243ed20bd7)
+        ;
+
+        
+    
+    
+            var circle_marker_b1231628e979f36669f928513d5f2d85 = L.circleMarker(
+                [0.514277, 35.26978],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+        var popup_f8063904ae5d58a7ac6f848846eb7c96 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_772764d495ab019ae6cba9188ca0d699 = $(`<div id="html_772764d495ab019ae6cba9188ca0d699" style="width: 100.0%; height: 100.0%;">Eldoret - Major city</div>`)[0];
+                popup_f8063904ae5d58a7ac6f848846eb7c96.setContent(html_772764d495ab019ae6cba9188ca0d699);
+            
+        
+
+        circle_marker_b1231628e979f36669f928513d5f2d85.bindPopup(popup_f8063904ae5d58a7ac6f848846eb7c96)
+        ;
+
+        
+    
+    
+            var circle_marker_5f5a39f8ee190c49d822d56c498bde97 = L.circleMarker(
+                [-1.038675, 37.083797],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c2e01b3d52ef79fd876159109962a0e5);
+        
+    
+        var popup_6a9ce9afd80acf6c789a092ac9dad4d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a6a811e6552d866d34aea7079f4d3bf0 = $(`<div id="html_a6a811e6552d866d34aea7079f4d3bf0" style="width: 100.0%; height: 100.0%;">Thika - Major city</div>`)[0];
+                popup_6a9ce9afd80acf6c789a092ac9dad4d4.setContent(html_a6a811e6552d866d34aea7079f4d3bf0);
+            
+        
+
+        circle_marker_5f5a39f8ee190c49d822d56c498bde97.bindPopup(popup_6a9ce9afd80acf6c789a092ac9dad4d4)
+        ;
+
+        
+    
+</script>
+</html>
