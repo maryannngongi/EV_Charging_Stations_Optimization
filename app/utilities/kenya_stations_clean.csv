@@ -1,0 +1,25 @@
+station name,county,country_code,latitude,longitude,ports,charger type
+City Mall EvChaja,Mombasa,KE,-4.020064,39.720490999999996,1.0,AC
+Waiyaki Way,Nairobi,KE,-1.259614,36.776883000000005,1.0,AC
+Waterfront Mall EvChaja,Nairobi,KE,-1.329425,36.71582,1.0,AC
+Two Rivers Mall EvChaja,Nairobi,KE,-1.210229,36.795215999999996,1.0,AC
+Nopea Ride Village Market,Nairobi,KE,-1.227277,36.805228,1.0,AC
+Nopea JKIA Airport,Nairobi,KE,-1.333731,36.928334,1.0,AC
+Two Rivers Mall Nairobi (Nopea),Nairobi,KE,-1.211449,36.795808,1.0,AC
+Sarit Centre Nairobi,Nairobi,KE,-1.2612450000000002,36.802243,1.0,AC
+TRM Mall,Nairobi,KE,-1.219824,36.889224,2.0,AC
+Holy Family Basilica Parking Silo,Nairobi,KE,-1.287358,36.820060999999995,1.0,AC
+The Hub Mall Karen,Nairobi,KE,-1.319503,36.703528000000006,1.0,AC
+Knights Energy,Nairobi,KE,-1.3408579999999999,36.757546999999995,3.0,AC
+UNGA House Westlands,Nairobi,KE,-1.26289,36.80467,1.0,AC
+KCB Towers Upper Hill,Nairobi,KE,-1.30132,36.81279,1.0,AC
+Britam Towers Upper Hill,Nairobi,KE,-1.29976,36.813140000000004,1.0,AC
+Movenpick Westlands,Nairobi,KE,-1.2610700000000001,36.804990000000004,1.0,AC
+Stima Plaza,Nairobi,KE,-1.27141,36.82053,1.0,AC/DC
+Ruaraka KPLC,Nairobi,KE,-1.25928,36.85954,1.0,AC/DC
+Westside Mall,Nakuru,KE,-0.28709,36.06393,1.0,AC
+Buffalo Mall,Nakuru,KE,-0.70423,36.429990000000004,1.0,AC
+Trinity Energy,Kiambu,KE,-1.11134,36.7843,1.0,AC
+Mega City Mall,Kisumu,KE,-0.10722999999999999,34.770509999999994,1.0,AC
+Dallas Lounge,Narok,KE,-1.0875,35.8771,1.0,AC
+Petrocity,Machakos,KE,-1.4288100000000001,36.96087,1.0,AC + DC
