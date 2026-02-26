@@ -21,7 +21,7 @@ This application uses population data and machine learning to recommend optimal 
 for electric vehicle charging stations across Kenyan counties.
 """)
 # Load data
-@st.cache
+@st.cache_data
 def load_data():
     county_df = pd.read_csv("./utilities/county_data_clean.csv")
     kenya_stations = pd.read_csv("./utilities/kenya_stations_clean.csv")
@@ -30,7 +30,7 @@ def load_data():
 
 county_df, kenya_stations, new_stations = load_data()
 # Load model
-@st.cache
+@st.cache_resource
 def load_models():
     additional_station_model = joblib.load("../ml_models/additional_station_model.joblib")
     county_kmeans_models = joblib.load("../ml_models/county_models.joblib")
@@ -135,4 +135,40 @@ elif page == "Station Placement":
 
     st.markdown("Green = Existing Stations  |   Blue = Recommended Stations")
 
-    folium_static(kenya_map)       
+    folium_static(kenya_map)  
+elif page == "Future Projections":
+
+    st.header("🔮 Future Infrastructure Projections")
+
+    selected_data = county_df[county_df["county"] == selected_county]
+
+    if predict_button:
+
+        if population_input == 0:
+            population_input = int(selected_data["population"].values[0])
+
+        if existing_stations_input == 0:
+            existing_stations_input = int(selected_data["num_stations"].values[0])
+
+        shape_area = float(selected_data["shape area"].values[0])
+
+        population_density = population_input / shape_area
+        station_spatial_density = existing_stations_input / shape_area
+
+        input_features = np.array([[
+            population_input,
+            population_density,
+            existing_stations_input,
+            station_spatial_density,
+            shape_area
+        ]])
+
+        prediction = additional_station_model.predict(input_features)[0]
+        prediction = max(0, round(prediction))
+
+        st.success(f"Predicted Additional Stations Needed: {prediction}")
+
+        st.metric("County Selected", selected_county)
+        st.metric("Population Used", f"{population_input:,}")
+        st.metric("Existing Stations Used", existing_stations_input)
+             
