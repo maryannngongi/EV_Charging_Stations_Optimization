@@ -1,4 +1,10 @@
-# **Kenyan EV charging station location optimization using population** 
+
+# **TwendeEV - Kenyan EV charging station location optimization using population**  
+Link to the TwendeEv App ~ https://twende-ev.streamlit.app/
+Dark Mode App
+
+Light Mode App
+
 ## **Business Understanding**
 ### **Overview** 
 The transition to electric vehicles (EVs) in Kenya is steadily gaining momentum due to :
