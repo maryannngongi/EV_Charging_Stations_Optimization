@@ -1,9 +1,14 @@
 
 # **TwendeEV - Kenyan EV charging station location optimization using population**  
 Link to the TwendeEv App ~ https://twende-ev.streamlit.app/
+
 Dark Mode App
+![Dark_mode_app](https://github.com/user-attachments/assets/aa757cad-7986-4e72-b7d7-27a2b32f29a0)
+
 
 Light Mode App
+![Light_mode_app](https://github.com/user-attachments/assets/d2f8a59c-1995-4295-9b13-03e970bff727)
+
 
 ## **Business Understanding**
 ### **Overview** 
