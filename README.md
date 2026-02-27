@@ -97,12 +97,18 @@ We used these features for the modeling section:
 
 ## **EDA**
 A bar graph representing required additional stations per county
+![Additional stations required](https://github.com/user-attachments/assets/7288e2d6-5e75-4449-a034-1475d557f771)
+
 
 
 A bar graph representing population per county
+![Population per county](https://github.com/user-attachments/assets/f145d6f7-3a31-4737-bb68-af429d291aa1)
+
+
 
 
 A scatter plot representing county population vs available charging stations
+![Population vs current station](https://github.com/user-attachments/assets/8e4cb2f4-8da7-4b60-bd9e-55b28d104a3e)
 
 
 
