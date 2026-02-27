@@ -13,14 +13,15 @@ import sklearn
 
 # Page configuration
 st.set_page_config(
-    page_title="Kenya EV Charging Station Optimizer",
+    page_title="TwendeEV",
     page_icon="⚡",
     layout="wide"
 )
 
-st.title("⚡ Kenya EV Charging Station Location Optimizer")
+st.title("⚡ TwendeEV")
+st.markdown("## Optimizing EV Charging Station Locations in Kenya")
 st.markdown("""
-This application uses population data and machine learning to recommend optimal locations 
+This application uses population, number of existing EV charging stations and machine learning to recommend optimal locations 
 for electric vehicle charging stations across Kenyan counties.
 """)
 
@@ -80,7 +81,6 @@ def allocate_new_stations(county, kenya_stations, k):
     kmeans.fit(training_points)
     return kmeans, kmeans.cluster_centers_, training_points
 
-st.write("Sklearn version:", sklearn.__version__)
 
 # Prediction logic
 if predict_button:
