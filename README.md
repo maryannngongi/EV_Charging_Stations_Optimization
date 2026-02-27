@@ -67,4 +67,27 @@ The columns utilized in this dataset are County/City, Station name, Charger Type
 * `ken_adminboundaries_tabulardata.xlsx` [OCHA services](https://data.humdata.org/dataset/cod-ab-ken) This dataset shows details on county boundaries across the country.
 The Shape Area for each county was the core column utilized in this dataset.
 
-* `county_coordinates.csv` This dataset contains county co-ordinate centroids.
+* `county_coordinates.csv` We webscraped data from this site [Latitude.to](https://latitude.to/) This dataset contains county co-ordinate centroids.
+## **Data Cleaning and Preparation**
+The datasets were systematically cleaned and prepared to ensure accuracy and reliability in the modeling process. This involved standardizing column names and formats, removing irrelevant fields, handling missing values, correcting data types, and validating geographic coordinates to eliminate duplicates and incomplete records. Additional features such as population density and station-to-population ratios were engineered to strengthen predictive performance. Finally, the data was aggregated at the county level to align with administrative planning units, resulting in a structured, analysis-ready dataset suitable for machine learning and spatial optimization.
+## **Feature Engineering**
+We used these features for the modeling section:
+- stations_per_100k: Normalized station count per 100,000 population
+
+- population_density: Population per unit area
+
+- population_per_station: Average population served per station (uses population as fallback for counties with no stations)
+
+- station_spatial_density: Number of stations per unit area
+
+- required_stations: Target number of stations based on population (1 per 200,000 people, minimum 1)
+
+- additional_stations: Gap between required and existing stations
+## **EDA**
+A bar graph representing required additional stations per county
+A bar graph representing population per county
+A scatter plot representing county population vs available charging stations
+## **Modeling**
+The modeling section combined predictive analytics with spatial optimization to determine both the number and optimal placement of new EV charging stations. A Random Forest regression model was developed to estimate additional station requirements per county using engineered demographic factors. Model performance was evaluated using cross-validation techniques to ensure robustness and generalizability. Based on the predicted station counts, KMeans clustering was then applied within each county to generate geographically distributed potential locations for expansion. This two-stage approach transformed raw demographic and spatial data into actionable, data-driven insights for infrastructure implementation for each county.
+## 
+
