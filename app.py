@@ -20,10 +20,18 @@ st.set_page_config(
 
 st.title("⚡ TwendeEV")
 st.markdown("## Optimizing EV Charging Station Locations in Kenya")
+st.markdown("### Users: Government planners, EV infrastructure developers, policy makers")
 st.markdown("""
 This application uses population, number of existing EV charging stations and machine learning to recommend optimal locations 
 for electric vehicle charging stations across Kenyan counties.
 """)
+
+# session state for inputs and outputs
+if "prediction_done" not in st.session_state:
+    st.session_state.prediction_done = False
+
+if "prediction_results" not in st.session_state:
+    st.session_state.prediction_results = None
 
 # Load data
 @st.cache_data
@@ -45,11 +53,17 @@ additional_station_model, county_kmeans_models = load_models()
 
 # Sidebar
 st.sidebar.title("User Input")
-selected_county = st.sidebar.selectbox("Select County", county_df["county"].unique())
+county_list = sorted(county_df["county"].unique())
+selected_county = st.sidebar.selectbox("Select County", county_list, index=county_list.index("Nairobi"))
 population_input = st.sidebar.number_input("Enter Population (Optional)", min_value=0, value=0)
 existing_stations_input = st.sidebar.number_input("Enter Existing Stations (Optional)", min_value=0, value=0)
 predict_button = st.sidebar.button("Predict Stations and Locations")
+reset_button = st.sidebar.button("Reset Inputs and Outputs")
 
+# Reset logic
+if reset_button:
+    st.session_state.prediction_done = False
+    st.session_state.prediction_results = None
 
 def allocate_new_stations(county, kenya_stations, k):
     county_name = county["county"]
@@ -105,6 +119,24 @@ if predict_button:
     predicted_additional = additional_station_model.predict(X_input)[0]
     predicted_additional = int(np.round(predicted_additional))
 
+    st.session_state.prediction_results = {
+        "county_data": county_data,
+        "population": population,
+        "num_stations": num_stations,
+        "predicted_additional": predicted_additional
+    }
+
+    st.session_state.prediction_done = True
+
+# DISPLAY RESULTS (STAYS EVEN AFTER DOWNLOAD)
+if st.session_state.prediction_done:
+
+    results = st.session_state.prediction_results
+
+    county_data = results["county_data"]
+    population = results["population"]
+    num_stations = results["num_stations"]
+    predicted_additional = results["predicted_additional"]
     st.success(f"Predicted Additional Stations for {selected_county}: {predicted_additional}")
 
     # Run dynamic KMeans allocation
@@ -123,9 +155,28 @@ if predict_button:
         )
 
         st.subheader("Predicted New Station Locations")
+
+        # Add metadata columns
+        new_stations_df["county"] = selected_county
+        new_stations_df["population_used"] = population
+        new_stations_df["existing_stations_used"] = num_stations
+        new_stations_df["predicted_additional"] = predicted_additional
+
         st.dataframe(new_stations_df)
 
+        # Convert to CSV
+        csv = new_stations_df.to_csv(index=False).encode("utf-8")
+
+        st.download_button(
+            label="Download Predicted Stations CSV",
+            data=csv,
+            file_name=f"{selected_county}_predicted_ev_stations.csv",
+            mime="text/csv"
+        )
+
+        # create map
         st.subheader("Station Map")
+        st.write("Blue: Existing Stations, Red: Predicted Stations")
 
         m = folium.Map(
             location=[county_data["county_lat"], county_data["county_lon"]],
@@ -157,3 +208,14 @@ if predict_button:
             ).add_to(m)
 
         folium_static(m)
+        # Save map as HTML
+        map_file = f"{selected_county}_ev_station_map.html"
+        m.save(map_file)
+
+        with open(map_file, "rb") as file:
+            st.download_button(
+                label="Download Map (HTML)",
+                data=file,
+                file_name=map_file,
+                mime="text/html"
+            )
