@@ -3,11 +3,13 @@
 Link to the TwendeEv App ~ https://twende-ev.streamlit.app/
 
 Dark Mode App
-![Dark_mode_app](https://github.com/user-attachments/assets/aa757cad-7986-4e72-b7d7-27a2b32f29a0)
+![new_dark_mode_image](https://github.com/user-attachments/assets/268ee2dc-9de7-4f0b-832a-bf36f20f8c17)
+
 
 
 Light Mode App
-![Light_mode_app](https://github.com/user-attachments/assets/d2f8a59c-1995-4295-9b13-03e970bff727)
+![new_light_mode_image](https://github.com/user-attachments/assets/bde9228d-62ee-4cde-a360-e9707a12b9e2)
+
 
 
 ## **Business Understanding**
